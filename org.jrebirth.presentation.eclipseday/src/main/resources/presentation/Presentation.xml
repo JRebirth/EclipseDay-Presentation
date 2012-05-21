@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<presentation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.jrebirth.org/Presentation" xsi:schemaLocation="http://www.jrebirth.org/Presentation Presentation.xsd">
+
+	<title>Présentation de JavaFX 2.0</title>
+	<date>24/05/2012</date>
+	<event>EclipseDayToulouse</event>
+	<place>Hotel Palladia</place>
+
+	<speakers>
+		<speaker firstName="Sébastien" lastName="Bordes" email="contact@jrebirth.org" job="JRebirth" />
+	</speakers>
+
+	<slides>
+
+	
+		<!-- Conference Place -->
+		<slide style="place" modelClass="org.jrebirth.presentation.eclipseday.ui.slides.place.PlaceModel">
+		</slide>
+
+		<!-- Presentation Title -->
+		<slide style="intro" modelClass="org.jrebirth.presentation.eclipseday.ui.slides.intro.IntroModel">
+			<title>Using JavaFX2\n  with Eclipse</title>
+		</slide>
+
+		<!-- MOI -->
+		<slide style="me">
+			<title>Sébastien Bordes</title>
+			<content>
+				<item>Developer</item>
+				<item>at Sud Ingenierie</item>
+				<item>Technologies</item>
+				<item level="1">Swing</item>
+				<item level="1">JEE</item>
+				<item level="1">Eclipse RCP</item>
+				<item level="1">Flash-Flex (AS3)</item>
+				<item level="1">Silverlight (C#)</item>
+				<item>@s8bordes</item>
+				<item>seb@jrebirth.org</item>
+				<item link="true">www.jrebirth.org</item>
+				<item link="true">blog.webeo.fr</item>
+				<item>Artwork by</item>
+				<item level="1">xoxi@xoxi.fr</item>
+			</content>
+		</slide>
+
+		<!-- Le plan -->
+		<slide>
+			<title>Plan</title>
+			<content>
+				<item>JavaFX Quick Overview</item>
+				<item>Efxclipse</item>
+				<item>EclipseRCP Refactoring</item>
+				
+			</content>
+		</slide>
+	
+		<!-- ************************************************************************* -->
+		<!-- ************************************************************************* -->
+		<!-- Pourquoi choisir JavaFX ? -->
+		<!-- ************************************************************************* -->
+		<!-- ************************************************************************* -->
+
+		<!-- HOOK -->
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="doyousee">
+			<title>Have you ever \n seen a  \n JavaFX 2 \n application ?</title>
+		</slide>
+
+		<!-- HOOK -->
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="dogfooding">
+			<title>Really ??</title>
+		</slide>
+
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel">
+			<title>JavaFX != JAVA</title>
+		</slide>
+		
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel">
+			<title>JavaFX 2\n IS \n JAVA</title>
+		</slide>
+
+
+		<!-- Architecture -->
+		<slide>
+			<title>Java FX 2.0 Architecture</title>
+			<content>
+				<item image="images/bg/Architecture_JavaFX_2.png" />
+			</content>
+		</slide>
+
+
+		<slide modelClass="org.jrebirth.presentation.eclipseday.ui.slides.node.NodeModel">
+			<title>UI Structure</title>
+		</slide>
+
+
+		<slide>
+			<title>How to Write</title>
+			<content>
+				<item>In Java</item>
+				<item level="1">Java Property</item>
+				<item level="1">Java Builders</item>
+				<item>CSS</item>
+				<item>FXML</item>
+				<item>Other languages</item>
+				<item level="1">groovyfx, scalafx, scenegraph, visage ..</item>
+			</content>
+		</slide>
+		
+		
+		<slide>
+			<title>Which IDE</title>
+			<content>
+				<item>Oracle provides support for NetBeans</item>
+				<item>IntelliJIdea ??</item>
+				<item>The Best One : Eclipse !</item>
+			</content>
+		</slide>
+		
+		<slide>
+			<title>Efxclipse</title>
+			<content>
+				<item>Non official plugin created by Tom Schindl</item>
+				<item level="1">@tomsontom</item>
+				<item level="1">www.efxclipse.org</item>
+				<item>Code completion and export</item>
+				<item>OSGI integration</item>
+			</content>
+		</slide>
+		
+
+		
+
+
+
+		<!-- Les Outils -->
+		<slide>
+			<title>Avec quoi développer</title>
+			<content>
+				<item>NetBeans (ant inside)</item>
+				<item>IntelliJ IDEA</item>
+				<item>Eclipse + e(fx)clipse</item>
+				<item>... ou tout IDE Java</item>
+				<item>Votre Usine de développement Java</item>
+				<item level="1">Git</item>
+				<item level="1">Maven</item>
+				<item level="1">Jenkins</item>
+				<item level="1">Sonar</item>
+				<item level="1">Artifactory</item>
+			</content>
+		</slide>
+
+
+
+		<!-- Source Code -->
+		<slide>
+			<title>Pour les curieux</title>
+			<content>
+				<item>Pour installer l'application</item>
+				<item level="1">javaws -import http://www.jrebirth.org/eclipse/EclipseDayToulouse.jnlp</item>
+				<item>Pour lancer l'application en ligne</item>
+				<item level="1" link="true">www.jrebirth.org/demo.html</item>
+				<item>Pour voir le code</item>
+				<item level="1" link="true">source.jrebirth.org/wsvn/JRebirth/JRebirth/trunk/org.jrebirth.presentation.javafx2</item>
+			</content>
+		</slide>
+		
+		
+		<!-- HOOK -->
+		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" animation="Tile60k">
+			<content>
+				<!-- <title>API par l'exemple</title> -->
+				<item image="images/splash/Demo.jpg" />
+			</content>
+		</slide>
+
+		<!-- THX -->
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel">
+			<title>Thank you \nfor your attention</title>
+		</slide>
+
+		<!-- Des Questions -->
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel">
+			<title>Do you have \n any questions ?</title>
+		</slide>
+
+	</slides>
+
+</presentation>
