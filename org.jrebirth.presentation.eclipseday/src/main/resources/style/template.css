@@ -101,9 +101,9 @@ VBox.content {
  * Me Slide
  */
 VBox.me{
-	-fx-background-position: 850px 20px;	
-	-fx-background-repeat: no-repeat;
-	-fx-background-image : url("../images/me/seb.jpg");
+	-fx-background-position: 850px 20px, 300px 40px;	
+	-fx-background-repeat: no-repeat, no-repeat;
+	-fx-background-image : url("../images/me/seb.jpg"), url("../images/me/SudIngenierie_clear.png");
 }
 
 /**************************************/
@@ -132,6 +132,13 @@ VBox.me{
 /** DogFooding */
 .dogfooding {
 	-fx-background-image : url("../images/splash/Dog_Fooding.jpg");
+	-fx-background-position: center center;
+	-fx-background-repeat : no-repeat;
+}
+
+/** QRCode */
+.qrcode {
+	-fx-background-image : url("../images/redir_jrebirth_eclipse.png");
 	-fx-background-position: center center;
 	-fx-background-repeat : no-repeat;
 }

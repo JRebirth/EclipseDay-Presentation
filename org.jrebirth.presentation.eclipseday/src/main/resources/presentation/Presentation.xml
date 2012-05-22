@@ -27,7 +27,7 @@
 			<title>Sébastien Bordes</title>
 			<content>
 				<item>Developer</item>
-				<item>at Sud Ingenierie</item>
+				<item level="1"></item>
 				<item>Technologies</item>
 				<item level="1">Swing</item>
 				<item level="1">JEE</item>
@@ -35,7 +35,7 @@
 				<item level="1">Flash-Flex (AS3)</item>
 				<item level="1">Silverlight (C#)</item>
 				<item>@s8bordes</item>
-				<item>seb@jrebirth.org</item>
+				<item level="1">seb@jrebirth.org</item>
 				<item link="true">www.jrebirth.org</item>
 				<item link="true">blog.webeo.fr</item>
 				<item>Artwork by</item>
@@ -183,6 +183,10 @@
 			<title>Do you have \n any questions ?</title>
 		</slide>
 
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="qrcode">
+			<title></title>
+		</slide>
+		
 	</slides>
 
 </presentation>

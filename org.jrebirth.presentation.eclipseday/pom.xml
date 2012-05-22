@@ -151,7 +151,7 @@
 
 						<!-- used to automatically identify the jar containing the main class. -->
 						<!-- this is perhaps going to change -->
-						<mainClass>org.jrebirth.presentation.EclipseDayPresentation</mainClass>
+						<mainClass>org.jrebirth.presentation.eclipseday.EclipseDayPresentation</mainClass>
 					</jnlp>
 
 
