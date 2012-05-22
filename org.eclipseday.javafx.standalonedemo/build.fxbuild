@@ -1,0 +1,2 @@
+jfx.build.stagingdir = ${workspace}/HelloToulouse2/build
+jfx.build.apptitle = HelloToulouse2

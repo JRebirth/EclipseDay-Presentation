@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="BOTTOM_RIGHT" fillHeight="false" prefHeight="48.0" maxHeight="48.0" minHeight="48.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <ImageView>
+      <image>
+        <Image url="@juno.png" preserveRatio="false" smooth="false" />
+      </image>
+    </ImageView>
+    <Label id="label1" text="Powered by efxclipse" textAlignment="CENTER">
+      <font>
+        <Font name="Copperplate Gothic Bold" size="26.0" />
+      </font>
+    </Label>
+  </children>
+</HBox>
