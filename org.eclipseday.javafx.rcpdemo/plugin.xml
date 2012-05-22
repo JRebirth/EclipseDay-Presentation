@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.eclipseday.javafx.rcpdemo.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="org.eclipseday.javafx.rcpdemo.Perspective"
+            id="org.eclipseday.javafx.rcpdemo.Perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="PieChart"
+            class="org.eclipseday.javafx.rcpdemo.view.PieChartView"
+            id="org.eclipseday.javafx.rcpdemo.view.PieChartView">
+      </view>
+      <view
+            class="org.eclipseday.javafx.rcpdemo.view.BrowserView"
+            id="org.eclipseday.javafx.rcpdemo.view.BrowserView"
+            name="Browser"
+            restorable="true">
+            </view>
+		<view
+            class="org.eclipseday.javafx.rcpdemo.view.MediaView"
+            id="org.eclipseday.javafx.rcpdemo.view.MediaView"
+            name="Media"
+            restorable="true">
+      </view>
+      
+      		<view
+            class="org.eclipseday.javafx.rcpdemo.view.EffectView"
+            id="org.eclipseday.javafx.rcpdemo.view.EffectView"
+            name="Effect"
+            restorable="true">
+      </view>
+      
+   </extension>
+   <!--
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               id="org.eclipseday.javafx.rcpdemo.PieChartView"
+               minimized="false"
+               relationship="left"
+               relative="org.eclipse.ui.editorss"
+               showTitle="true"
+               standalone="true">
+         </view>
+      </perspectiveExtension>
+   </extension>-->
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
