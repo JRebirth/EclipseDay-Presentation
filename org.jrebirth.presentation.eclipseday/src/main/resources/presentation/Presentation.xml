@@ -47,9 +47,15 @@
 		<slide>
 			<title>Plan</title>
 			<content>
-				<item>JavaFX Quick Overview</item>
-				<item>Efxclipse</item>
-				<item>EclipseRCP Refactoring</item>
+				<item>JavaFX 2 Quick Overview</item>
+				<item></item>
+				<item>Tribute to Efxclipse</item>
+				<item></item>
+				<item>Demo</item>
+				<item level="1">Building with m2eclipse</item>
+				<item level="1">Live Coding with Efxclipse</item>
+				<item level="1">Integrate to EclipseRCP</item>
+				
 				
 			</content>
 		</slide>
@@ -92,27 +98,57 @@
 			<title>UI Structure</title>
 		</slide>
 
+		<slide>
+			<title>Other key features</title>
+			<content>
+				<item>CrossPlatForm</item>
+				<item>Easy Binding</item>
+				<item>Web and Media Components</item>
+			</content>
+		</slide>
 
 		<slide>
-			<title>How to Write</title>
+			<title>How to Write JavaFX</title>
 			<content>
 				<item>In Java</item>
 				<item level="1">Java Property</item>
 				<item level="1">Java Builders</item>
-				<item>CSS</item>
+				<item>(-FX) CSS</item>
 				<item>FXML</item>
 				<item>Other languages</item>
-				<item level="1">groovyfx, scalafx, scenegraph, visage ..</item>
+				<item level="1">groovyFX, scalaFX, scenegraph, visage ..</item>
 			</content>
 		</slide>
 		
+		<slide>
+			<title>Compatible with</title>
+			<content>
+
+				<item>Your Software Factory</item>
+				<item level="1">Git</item>
+				<item level="1">Maven</item>
+				<item level="1">Jenkins</item>
+				<item level="1">Sonar</item>
+				<item level="1">Artifactory</item>
+				
+			</content>
+		</slide>
 		
 		<slide>
 			<title>Which IDE</title>
 			<content>
-				<item>Oracle provides support for NetBeans</item>
+				<item>NetBeans</item>
 				<item>IntelliJIdea ??</item>
 				<item>The Best One : Eclipse !</item>
+				<item level="1">Fast and Free !!</item>
+				<item level="1">Best Code Formatter</item>
+				<item level="1">JavaFX capable (efxclipse)</item>
+				<item level="1">Good Maven plugin (m2e)</item>
+				<item level="1">Awesome Git integration (egit)</item>
+				<item level="1">Developer Task Centric (Mylyn)</item>
+				<item level="1">Really useful Sonar plugin</item>
+				<item level="1">What else ?</item>
+				
 			</content>
 		</slide>
 		
@@ -127,49 +163,22 @@
 			</content>
 		</slide>
 		
-
-		
-
-
-
-		<!-- Les Outils -->
-		<slide>
-			<title>Avec quoi développer</title>
-			<content>
-				<item>NetBeans (ant inside)</item>
-				<item>IntelliJ IDEA</item>
-				<item>Eclipse + e(fx)clipse</item>
-				<item>... ou tout IDE Java</item>
-				<item>Votre Usine de développement Java</item>
-				<item level="1">Git</item>
-				<item level="1">Maven</item>
-				<item level="1">Jenkins</item>
-				<item level="1">Sonar</item>
-				<item level="1">Artifactory</item>
-			</content>
-		</slide>
-
-
-
-		<!-- Source Code -->
-		<slide>
-			<title>Pour les curieux</title>
-			<content>
-				<item>Pour installer l'application</item>
-				<item level="1">javaws -import http://www.jrebirth.org/eclipse/EclipseDayToulouse.jnlp</item>
-				<item>Pour lancer l'application en ligne</item>
-				<item level="1" link="true">www.jrebirth.org/demo.html</item>
-				<item>Pour voir le code</item>
-				<item level="1" link="true">source.jrebirth.org/wsvn/JRebirth/JRebirth/trunk/org.jrebirth.presentation.javafx2</item>
-			</content>
-		</slide>
-		
-		
 		<!-- HOOK -->
 		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" animation="Tile60k">
 			<content>
 				<!-- <title>API par l'exemple</title> -->
 				<item image="images/splash/Demo.jpg" />
+			</content>
+		</slide>
+		
+				
+		<!-- Source Code -->
+		<slide>
+			<title>Source Code</title>
+			<content>
+				<item>GitHub is your friend !</item>
+				<item></item>
+				<item level="1">https://github.com/JRebirth/EclipseDay-Presentation</item>
 			</content>
 		</slide>
 

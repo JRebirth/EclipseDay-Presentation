@@ -71,6 +71,7 @@ public final class NodeView extends AbstractTemplateView<NodeModel, BorderPane, 
 
         this.tree = ImageViewBuilder.create()
                 .image(loadImage("images/node/think_tree.jpg"))
+                .opacity(0.0)
                 .build();
 
         getRootNode().setCenter(this.sp);
@@ -103,7 +104,7 @@ public final class NodeView extends AbstractTemplateView<NodeModel, BorderPane, 
         this.sp.getChildren().add(this.thinkNode);
         StackPane.setAlignment(this.thinkNode, Pos.CENTER);
 
-        ScaleTransitionBuilder.create().toX(3).toY(3).node(this.thinkNode).duration(Duration.seconds(1)).interpolator(Interpolator.EASE_IN).build().play();
+        ScaleTransitionBuilder.create().toX(3).toY(3).node(this.thinkNode).duration(Duration.seconds(1)).interpolator(Interpolator.LINEAR).build().play();
 
     }
 
@@ -130,13 +131,13 @@ public final class NodeView extends AbstractTemplateView<NodeModel, BorderPane, 
                 FadeTransitionBuilder.create().node(this.thinkNode).duration(Duration.seconds(1)).toValue(0).build(),
 
                 ParallelTransitionBuilder.create().children(
-                        ScaleTransitionBuilder.create().toX(0.001).toY(0.001).node(this.woodNode).duration(Duration.seconds(2)).interpolator(Interpolator.EASE_IN).build(),
+                        ScaleTransitionBuilder.create().toX(0.001).toY(0.001).node(this.woodNode).duration(Duration.seconds(2)).interpolator(Interpolator.LINEAR).build(),
                         TimelineBuilder.create().keyFrames(
                                 new KeyFrame(Duration.seconds(0), new KeyValue(fx.widthProperty(), 15.0), new KeyValue(fx.heightProperty(), 15.0)),
                                 new KeyFrame(Duration.seconds(1), new KeyValue(fx.widthProperty(), 1), new KeyValue(fx.heightProperty(), 1))
                                 ).build(),
                         FadeTransitionBuilder.create().node(this.tree).fromValue(0.1).toValue(1.0).duration(Duration.millis(1300)).build(),
-                        ScaleTransitionBuilder.create().toX(1).toY(1).node(this.tree).duration(Duration.seconds(2)).build()).interpolator(Interpolator.EASE_IN).build()
+                        ScaleTransitionBuilder.create().toX(1).toY(1).node(this.tree).duration(Duration.seconds(2)).build()).interpolator(Interpolator.LINEAR).build()
                 )
                 .build().play();
 
@@ -158,7 +159,7 @@ public final class NodeView extends AbstractTemplateView<NodeModel, BorderPane, 
         this.sp.getChildren().add(this.thinkTree);
         StackPane.setAlignment(this.thinkTree, Pos.CENTER);
 
-        ScaleTransitionBuilder.create().toX(3).toY(3).node(this.thinkTree).duration(Duration.seconds(1)).interpolator(Interpolator.EASE_IN).build().play();
+        ScaleTransitionBuilder.create().toX(3).toY(3).node(this.thinkTree).duration(Duration.seconds(1)).interpolator(Interpolator.LINEAR).build().play();
     }
 
     /**
