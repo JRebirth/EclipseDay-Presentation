@@ -49,7 +49,7 @@
 			<content>
 				<item>JavaFX 2 Quick Overview</item>
 				<item></item>
-				<item>Tribute to Efxclipse</item>
+				<item>Why Eclipse ?</item>
 				<item></item>
 				<item>Demo</item>
 				<item level="1">Building with m2eclipse</item>
@@ -103,37 +103,251 @@
 			<content>
 				<item>CrossPlatForm</item>
 				<item>Easy Binding</item>
+				<item>Event Handler</item>
+				<item>Animation</item>
 				<item>Web and Media Components</item>
-			</content>
-		</slide>
-
-		<slide>
-			<title>How to Write JavaFX</title>
-			<content>
-				<item>In Java</item>
-				<item level="1">Java Property</item>
-				<item level="1">Java Builders</item>
-				<item>(-FX) CSS</item>
-				<item>FXML</item>
-				<item>Other languages</item>
-				<item level="1">groovyFX, scalaFX, scenegraph, visage ..</item>
-			</content>
-		</slide>
-		
-		<slide>
-			<title>Compatible with</title>
-			<content>
-
-				<item>Your Software Factory</item>
+				
+				<item>Compatible with Your Software Factory</item>
 				<item level="1">Git</item>
 				<item level="1">Maven</item>
 				<item level="1">Jenkins</item>
 				<item level="1">Sonar</item>
 				<item level="1">Artifactory</item>
-				
 			</content>
 		</slide>
 		
+		<slide>
+			<title>How to Write JavaFX application</title>
+			<content>
+				<item>In Java</item>
+				<item level="1">Java Property</item>
+				<item level="1">Java Builders</item>
+				<item>CSS (-FX)</item>
+				<item>FXML</item>
+				<item>Other languages</item>
+				<item level="1">GroovyFX, ScalaFX, Scenegraph, Visage ..</item>
+			</content>
+		</slide>
+		
+<!-- Les JavaBuilder -->
+		<slide>
+			<title>Java Builders</title>
+			<content>
+				<item>More concise</item>
+				<item>Replace constructors with N parameters</item>
+				<item>Reusable generic Builder</item>
+				<item>Extensible</item>
+				<item level="1">Builder&lt;B extends Builder&lt;B&gt;&gt;</item>
+				<item level="1" link="true">blog.netopyr.com/2012/01/24/advantages-of-javafx-builders/</item>
+				<item level="1" link="true">fxexperience.com/2012/01/extending-pathbuilder/</item>
+				<item html="true">
+				<![CDATA[
+				
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<title></title>
+  <style type="text/css">
+    <!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+  </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head><body>
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+  <!-- start source code -->
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Text&nbsp;text&nbsp;=&nbsp;TextBuilder.create</font><font color="#000000">()</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">.styleClass</font><font color="#000000">(</font><font color="#2a00ff">&#34;item&#34;&nbsp;</font><font color="#000000">+&nbsp;item.getLevel</font><font color="#000000">())</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">.text</font><font color="#000000">(</font><font color="#000000">item.getValue</font><font color="#000000">())</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">.opacity</font><font color="#000000">(</font><font color="#990000">1.0</font><font color="#000000">)</font><br />
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">.build</font><font color="#000000">()</font><font color="#000000">;</font></code>
+</td>
+  <!-- end source code -->
+   </tr>
+</table>
+</div>
+</body></html>
+				 ]]>
+				</item>
+			</content>
+		</slide>
+		
+		
+		<!-- Properties -->
+		<slide modelClass="org.jrebirth.presentation.eclipseday.ui.slides.property.PropertyModel">
+			<title>Observable and Binding</title>
+			<content>
+				<title>Collection</title>
+				<item>Listen collection update</item>
+				<item level="1">ObservableList</item>
+				<item level="1">ObservableMap</item>
+				<item level="1">FxCollections</item>
+			</content>
+
+			<content name="JavaBean">
+				<title>Java Beans</title>
+				<item>Getters and Setters</item>
+				<item html="true">
+			<![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<title></title>
+  <style type="text/css">
+    <!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+  </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head><body>
+
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#808080">01</font>&nbsp;<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">JavaBean&nbsp;</font><font color="#000000">{</font><br />
+<font color="#808080">02</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">03</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;The&nbsp;bean&nbsp;integer&nbsp;value.&nbsp;*/</font><br />
+<font color="#808080">04</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">value;</font><br />
+<font color="#808080">05</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">06</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br />
+<font color="#808080">07</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">value&nbsp;The&nbsp;value&nbsp;to&nbsp;set.</font><br />
+<font color="#808080">08</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br />
+<font color="#808080">09</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setValue</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">value</font><font color="#000000">)&nbsp;{</font><br />
+<font color="#808080">10</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.value&nbsp;=&nbsp;value;</font><br />
+<font color="#808080">11</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#808080">12</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">13</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br />
+<font color="#808080">14</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">Returns&nbsp;the&nbsp;value.</font><br />
+<font color="#808080">15</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br />
+<font color="#808080">16</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">getValue</font><font color="#000000">()&nbsp;{</font><br />
+<font color="#808080">17</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">value;</font><br />
+<font color="#808080">18</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#808080">19</font>&nbsp;<font color="#000000">}</font></code>
+    
+   </td>
+   </tr>
+</table>
+</div>
+</body></html>
+			]]>
+			
+				</item>
+			</content>
+
+			<content name="JavaProperty">
+				<title>Properties</title>
+				<item>Java Beans ++</item>
+				<item html="true">
+		<![CDATA[
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<title></title>
+  <style type="text/css">
+    <!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+  </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head><body>
+
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#808080">01</font>&nbsp;<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">javafx.beans.property.IntegerProperty;</font><br />
+<font color="#808080">02</font>&nbsp;<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">javafx.beans.property.SimpleIntegerProperty;</font><br />
+<font color="#808080">03</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">04</font>&nbsp;<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">JavaProperty&nbsp;</font><font color="#000000">{</font><br />
+<font color="#808080">05</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">06</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;The&nbsp;integer&nbsp;property.&nbsp;*/</font><br />
+<font color="#808080">07</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;final&nbsp;</b></font><font color="#000000">IntegerProperty&nbsp;intProperty&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">SimpleIntegerProperty</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#808080">08</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">09</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br />
+<font color="#808080">10</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">Returns&nbsp;the&nbsp;value.</font><br />
+<font color="#808080">11</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br />
+<font color="#808080">12</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>double&nbsp;</b></font><font color="#000000">getValue</font><font color="#000000">()&nbsp;{</font><br />
+<font color="#808080">13</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">intProperty.get</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#808080">14</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#808080">15</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">16</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br />
+<font color="#808080">17</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">value&nbsp;The&nbsp;value&nbsp;to&nbsp;set.</font><br />
+<font color="#808080">18</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br />
+<font color="#808080">19</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;final&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setValue</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">value</font><font color="#000000">)&nbsp;{</font><br />
+<font color="#808080">20</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">intProperty.set</font><font color="#000000">(</font><font color="#000000">value</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#808080">21</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#808080">22</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">23</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br />
+<font color="#808080">24</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">the&nbsp;integer&nbsp;property.</font><br />
+<font color="#808080">25</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br />
+<font color="#808080">26</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">IntegerProperty&nbsp;intProperty</font><font color="#000000">()&nbsp;{</font><br />
+<font color="#808080">27</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">intProperty;</font><br />
+<font color="#808080">28</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#808080">29</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">30</font>&nbsp;<font color="#000000">}</font></code>
+    
+   </td>
+   </tr>
+</table>
+</div>
+</body></html>
+		]]>
+		</item>
+
+			</content>
+
+			<content name="XXXProperty">
+				<title>JavaFX Properties</title>
+				<item>Primitives types</item>
+				<item level="1">Boolean, Double, Float, Integer, Long, String</item>
+				<item>Extensible</item>
+				<item level="1">ObjectProperty&lt;T&gt;</item>
+				<item>ReadOnly or Wrapper</item>
+				<item>Properties link (add,divide ....)</item>
+				<item>ChangeListener &amp; InvalidationListener</item>
+			</content>
+
+			<content name="Binding">
+				<title>Binding</title>
+				<item>Unidirectionnal or Bidirectionnal</item>
+				<item html="true">
+		<![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+<title></title>
+  <style type="text/css">
+    <!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+  </style>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head><body>
+<div align="left" class="java">
+<table border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+   <tr>
+   <td nowrap="nowrap" valign="top" align="left">
+    <code>
+<font color="#808080">01</font>&nbsp;<font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">NumberFormat&nbsp;nf&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">DecimalFormat</font><font color="#000000">(</font><font color="#2a00ff">&#34;0.0&#34;</font><font color="#000000">)</font><font color="#000000">;</font><br />
+<font color="#808080">02</font>&nbsp;<font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Circle&nbsp;c&nbsp;=&nbsp;CircleBuilder.create</font><font color="#000000">()</font><font color="#000000">.fill</font><font color="#000000">(</font><font color="#000000">Color.AQUA</font><font color="#000000">)</font><font color="#000000">.radius</font><font color="#000000">(</font><font color="#990000">50</font><font color="#000000">)</font><font color="#000000">.build</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#808080">03</font>&nbsp;<font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Slider&nbsp;s&nbsp;=&nbsp;SliderBuilder.create</font><font color="#000000">()</font><font color="#000000">.min</font><font color="#000000">(</font><font color="#990000">0.1</font><font color="#000000">)</font><font color="#000000">.max</font><font color="#000000">(</font><font color="#990000">5</font><font color="#000000">)</font><font color="#000000">.value</font><font color="#000000">(</font><font color="#990000">1.0</font><font color="#000000">)</font><font color="#000000">.majorTickUnit</font><font color="#000000">(</font><font color="#990000">1.0</font><font color="#000000">)</font><font color="#000000">.maxWidth</font><font color="#000000">(</font><font color="#990000">200</font><font color="#000000">)</font><font color="#000000">.build</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#808080">04</font>&nbsp;<font color="#7f0055"><b>final&nbsp;</b></font><font color="#000000">Label&nbsp;l&nbsp;=&nbsp;LabelBuilder.create</font><font color="#000000">()</font><font color="#000000">.build</font><font color="#000000">()</font><font color="#000000">;</font><br />
+<font color="#808080">05</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">06</font>&nbsp;<font color="#000000">c.scaleXProperty</font><font color="#000000">()</font><font color="#000000">.bind</font><font color="#000000">(</font><font color="#000000">s.valueProperty</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#808080">07</font>&nbsp;<font color="#000000">c.scaleYProperty</font><font color="#000000">()</font><font color="#000000">.bind</font><font color="#000000">(</font><font color="#000000">s.valueProperty</font><font color="#000000">())</font><font color="#000000">;</font><br />
+<font color="#808080">08</font>&nbsp;<font color="#ffffff"></font><br />
+<font color="#808080">09</font>&nbsp;<font color="#000000">s.valueProperty</font><font color="#000000">()</font><font color="#000000">.addListener</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">ChangeListener&lt;Number&gt;</font><font color="#000000">()&nbsp;{</font><br />
+<font color="#808080">10</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;</font><font color="#646464">@Override</font><br />
+<font color="#808080">11</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">changed</font><font color="#000000">(</font><font color="#000000">ObservableValue&lt;?&nbsp;</font><font color="#7f0055"><b>extends&nbsp;</b></font><font color="#000000">Number&gt;&nbsp;observable,&nbsp;Number&nbsp;oldValue,&nbsp;Number&nbsp;newValue</font><font color="#000000">)&nbsp;{</font><br />
+<font color="#808080">12</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">l.setText</font><font color="#000000">(</font><font color="#000000">nf.format</font><font color="#000000">(</font><font color="#000000">newValue</font><font color="#000000">))</font><font color="#000000">;</font><br />
+<font color="#808080">13</font>&nbsp;<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br />
+<font color="#808080">14</font>&nbsp;<font color="#000000">})</font><font color="#000000">;</font></code>
+    
+   </td>
+   </tr>
+</table>
+</div>
+</body></html>
+		]]>
+		</item>
+			</content>
+		</slide>
+				
 		<slide>
 			<title>Which IDE</title>
 			<content>
@@ -158,7 +372,7 @@
 				<item>Non official plugin created by Tom Schindl</item>
 				<item level="1">@tomsontom</item>
 				<item level="1">www.efxclipse.org</item>
-				<item>Code completion and export</item>
+				<item>Code completion</item>
 				<item>OSGI integration</item>
 			</content>
 		</slide>
@@ -179,6 +393,7 @@
 				<item>GitHub is your friend !</item>
 				<item></item>
 				<item level="1">https://github.com/JRebirth/EclipseDay-Presentation</item>
+				<item image="images/bg/jrebirth-github.png" />
 			</content>
 		</slide>
 
@@ -188,7 +403,7 @@
 		</slide>
 
 		<!-- Des Questions -->
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel">
+		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="notroll">
 			<title>Do you have \n any questions ?</title>
 		</slide>
 

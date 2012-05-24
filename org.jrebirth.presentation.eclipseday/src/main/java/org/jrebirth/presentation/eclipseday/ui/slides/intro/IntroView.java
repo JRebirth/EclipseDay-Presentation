@@ -20,6 +20,7 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import org.jrebirth.core.exception.CoreException;
+import org.jrebirth.presentation.PrezFonts;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
 /**
@@ -79,7 +80,7 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
                 .create()
                 // .text(getModel().getSlide().getTitle().replaceAll("\\\\n", "\n").replaceAll("\\\\t", "\t"))
                 // .styleClass("label", "introTitle")
-                // .font(PrezFonts.TYPEWRITER.get())
+                .font(PrezFonts.TYPEWRITER.get())
                 // .textFill(Color.BLACK) // web("#7F0055")
                 .textFill(Color.WHITE)
                 .alignment(Pos.CENTER_LEFT)
@@ -87,7 +88,7 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
                 .minHeight(500)
                 .build();
 
-        this.label.getStyleClass().add("introTitle");
+        // this.label.getStyleClass().add("introTitle");
 
         // label.scaleXProperty().bind(Bindings.divide(getModel().getLocalFacade().getGlobalFacade().getApplication().getStage().widthProperty(), 1024));
         // label.scaleYProperty().bind(Bindings.divide(getModel().getLocalFacade().getGlobalFacade().getApplication().getStage().heightProperty(), 768));

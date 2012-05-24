@@ -15,10 +15,11 @@
     -fx-fill : #A0DCFF ;
 }
 
+/*
 .introTitle {
-	-fx-font : 100px "1942 report";
-	/*-fx-label-fill: #FFFFFF;*/
-}
+	-fx-font : 100px "1942 Report"; 
+	-fx-label-fill: #FFFFFF;
+}*/
 
 
 .header{
@@ -101,9 +102,9 @@ VBox.content {
  * Me Slide
  */
 VBox.me{
-	-fx-background-position: 850px 20px, 300px 40px;	
-	-fx-background-repeat: no-repeat, no-repeat;
-	-fx-background-image : url("../images/me/seb.jpg"), url("../images/me/SudIngenierie_clear.png");
+	-fx-background-position: 850px 20px, 300px 40px, 300px 370px;	
+	-fx-background-repeat: no-repeat, no-repeat, no-repeat;
+	-fx-background-image : url("../images/me/seb.jpg"), url("../images/me/SudIngenierie_clear.png"), url("../images/me/JRebirth_128x128.png");
 }
 
 /**************************************/
@@ -133,6 +134,13 @@ VBox.me{
 .dogfooding {
 	-fx-background-image : url("../images/splash/Dog_Fooding.jpg");
 	-fx-background-position: center center;
+	-fx-background-repeat : no-repeat;
+}
+
+.notroll {
+	-fx-background-color : #FFFFFF;
+	-fx-background-image : url("../images/splash/no-troll.png");
+	-fx-background-position: 750px  530px;
 	-fx-background-repeat : no-repeat;
 }
 
