@@ -114,7 +114,7 @@
 
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>webstart-maven-plugin</artifactId>
-				<version>1.0-beta-3-SNAPSHOT</version>
+				<version>1.0-beta-3</version>
 
 				<!-- do not bind to install phase - - > <executions> <execution> <goals> <goal>package</goal> </goals> </execution> </executions> -->
 

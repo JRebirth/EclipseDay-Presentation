@@ -136,18 +136,27 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
     }
 
     /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void show() {
-        this.sequence.playFromStart();
-    }
-
-    /**
      * @return Returns the fadeTransition.
      */
     FadeTransition getFadeTransition() {
         return this.fadeTransition;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void doStart() {
+        this.sequence.playFromStart();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void doReload() {
+        // Nothing to do yet
+
     }
 
 }

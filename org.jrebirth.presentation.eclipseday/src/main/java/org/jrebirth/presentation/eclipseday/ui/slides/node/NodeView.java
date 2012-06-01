@@ -171,4 +171,13 @@ public final class NodeView extends AbstractTemplateView<NodeModel, BorderPane, 
         return this.sp;
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void doReload() {
+        // Nothing to do yet
+
+    }
+
 }

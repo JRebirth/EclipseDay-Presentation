@@ -5,13 +5,11 @@ import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import org.jrebirth.core.application.AbstractApplication;
 import org.jrebirth.core.ui.Model;
-import org.jrebirth.presentation.PrezFonts;
 import org.jrebirth.presentation.ui.stack.StackModel;
 
 /**
@@ -73,10 +71,10 @@ public final class EclipseDayPresentation extends AbstractApplication<StackPane>
                 // scene.getStylesheets().add("style/candle.css");
 
                 // Manage F11 button to switch full screen
-                scene.addEventFilter(KeyEvent.KEY_RELEASED, new EventHandler<KeyEvent>() {
+                scene.addEventFilter(javafx.scene.input.KeyEvent.KEY_RELEASED, new EventHandler<javafx.scene.input.KeyEvent>() {
 
                     @Override
-                    public void handle(final KeyEvent event) {
+                    public void handle(final javafx.scene.input.KeyEvent event) {
                         if (event.isControlDown()) {
                             if (event.getCode() == KeyCode.ADD || event.getCode() == KeyCode.PLUS) {
                                 getScene().getRoot().setScaleX(getScene().getRoot().getScaleX() + 0.05);
@@ -96,8 +94,8 @@ public final class EclipseDayPresentation extends AbstractApplication<StackPane>
                 });
 
                 // Preload font for CSS
-                PrezFonts.SPLASH.get();
-                PrezFonts.TYPEWRITER.get();
+                EDPFonts.SPLASH.get();
+                EDPFonts.TYPEWRITER.get();
 
             }
         });
