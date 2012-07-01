@@ -16,7 +16,7 @@ import javafx.scene.effect.BoxBlur;
 import javafx.scene.effect.BoxBlurBuilder;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.ImageViewBuilder;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.StackPaneBuilder;
 import javafx.scene.paint.Color;
@@ -35,7 +35,7 @@ import org.jrebirth.presentation.ui.template.AbstractTemplateView;
  * @author Sébastien Bordes
  * 
  */
-public final class NodeView extends AbstractTemplateView<NodeModel, BorderPane, NodeController> {
+public final class NodeView extends AbstractTemplateView<NodeModel, AnchorPane, NodeController> {
 
     private ImageView woodNode;
 
@@ -74,7 +74,7 @@ public final class NodeView extends AbstractTemplateView<NodeModel, BorderPane, 
                 .opacity(0.0)
                 .build();
 
-        getRootNode().setCenter(this.sp);
+        getRootNode().getChildren().add(this.sp);
 
     }
 
