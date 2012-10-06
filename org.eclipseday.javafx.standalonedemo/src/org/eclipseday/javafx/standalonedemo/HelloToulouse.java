@@ -1,7 +1,11 @@
 package org.eclipseday.javafx.standalonedemo;
+
 import java.io.IOException;
 
+import javafx.animation.Animation;
+import javafx.animation.Transition;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -9,9 +13,12 @@ import javafx.scene.Scene;
 import javafx.scene.SceneBuilder;
 import javafx.scene.control.Label;
 import javafx.scene.control.LabelBuilder;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 /**
  * 
@@ -56,8 +63,25 @@ public class HelloToulouse extends Application {
         // Add an fxml node
         final Node fxmlNode = (Node) FXMLLoader.load(Thread.currentThread().getContextClassLoader().getResource("powered.fxml"));
 
+        final String content = "Lorem ipsum sin dolor amut";
+        final Text text = new Text(10, 20, "");
+
+        final Animation animation = new Transition() {
+            {
+                setCycleDuration(Duration.millis(2000));
+            }
+
+            @Override
+            protected void interpolate(final double frac) {
+                final int length = content.length();
+                final int n = Math.round(length * (float) frac);
+                text.setText(content.substring(0, n));
+            }
+
+        };
+
         // Add visual components to the root node
-        parent.getChildren().addAll(label, fxmlNode);
+        parent.getChildren().addAll(label, fxmlNode, text);
 
         // Manage layout constraints
         StackPane.setAlignment(parent.getChildren().get(0), Pos.CENTER);
@@ -67,6 +91,34 @@ public class HelloToulouse extends Application {
         primaryStage.setTitle("JavaFX Demo");
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        scene.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
+
+            @Override
+            public void handle(final KeyEvent arg0) {
+                System.out.println("filter1");
+
+            }
+        });
+
+        scene.addEventFilter(KeyEvent.ANY, new EventHandler<KeyEvent>() {
+
+            @Override
+            public void handle(final KeyEvent arg0) {
+                System.out.println("filter2");
+
+            }
+        });
+
+        scene.addEventHandler(KeyEvent.ANY, new EventHandler<KeyEvent>() {
+
+            @Override
+            public void handle(final KeyEvent arg0) {
+                System.out.println("handler");
+            }
+        });
+
+        animation.play();
     }
 
     /**
