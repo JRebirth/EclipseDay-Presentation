@@ -1,5 +1,9 @@
 package org.jrebirth.presentation.eclipseday;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
@@ -9,7 +13,9 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import org.jrebirth.core.application.AbstractApplication;
+import org.jrebirth.core.resource.font.FontEnum;
 import org.jrebirth.core.ui.Model;
+import org.jrebirth.core.wave.Wave;
 import org.jrebirth.presentation.ui.stack.StackModel;
 
 /**
@@ -92,13 +98,36 @@ public final class EclipseDayPresentation extends AbstractApplication<StackPane>
                         }
                     }
                 });
-
-                // Preload font for CSS
-                EDPFonts.SPLASH.get();
-                EDPFonts.TYPEWRITER.get();
-
             }
         });
 
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected List<FontEnum> getFontToPreload() {
+        return Arrays.asList(new FontEnum[] {
+                EDPFonts.SPLASH,
+                EDPFonts.TYPEWRITER
+        });
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<Wave> getPreBootWaveList() {
+        return Collections.emptyList();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<Wave> getPostBootWaveList() {
+        return Collections.emptyList();
+    }
+
 }
