@@ -31,9 +31,6 @@ import org.jrebirth.presentation.ui.template.AbstractTemplateView;
  * The custom introduction slide.
  * 
  * @author Sébastien Bordes
- * 
- * @version $Revision: 72 $ $Author: sbordes $
- * @since $Date: 2011-10-17 22:26:35 +0200 (Mon, 17 Oct 2011) $
  */
 public final class PropertyView extends AbstractTemplateView<PropertyModel, AnchorPane, PropertyController> {
 
@@ -97,6 +94,15 @@ public final class PropertyView extends AbstractTemplateView<PropertyModel, Anch
      */
     @Override
     public void doReload() {
+        // Nothing to do yet
+
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void doHide() {
         // Nothing to do yet
 
     }

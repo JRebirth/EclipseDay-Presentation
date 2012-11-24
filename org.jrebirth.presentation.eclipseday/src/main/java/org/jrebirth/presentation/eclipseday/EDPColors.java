@@ -3,8 +3,8 @@ package org.jrebirth.presentation.eclipseday;
 import javafx.scene.paint.Color;
 
 import org.jrebirth.core.resource.ResourceBuilders;
-import org.jrebirth.core.resource.color.ColorBuilder;
 import org.jrebirth.core.resource.color.ColorEnum;
+import org.jrebirth.core.resource.color.ColorBuilder;
 import org.jrebirth.core.resource.color.ColorParams;
 import org.jrebirth.core.resource.color.RGB255Color;
 import org.jrebirth.core.resource.color.WebColor;

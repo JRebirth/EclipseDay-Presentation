@@ -3,8 +3,8 @@ package org.jrebirth.presentation.eclipseday;
 import javafx.scene.text.Font;
 
 import org.jrebirth.core.resource.ResourceBuilders;
-import org.jrebirth.core.resource.font.FontBuilder;
 import org.jrebirth.core.resource.font.FontEnum;
+import org.jrebirth.core.resource.font.FontBuilder;
 import org.jrebirth.core.resource.font.FontParams;
 import org.jrebirth.core.resource.font.RealFont;
 
