@@ -106,4 +106,12 @@ public final class PropertyView extends AbstractTemplateView<PropertyModel, Anch
         // Nothing to do yet
 
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void doStart() {
+        // Nothing to do yet
+    }
 }
