@@ -15,17 +15,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jrebirth.presentation.eclipseday;
+package org.jrebirth.presentation.eclipseday.resources;
 
 import org.jrebirth.core.resource.font.FontName;
 
-// TODO: Auto-generated Javadoc
 /**
- * The class <strong>FontsLoader</strong>.
+ * The class <strong>EDPFontNames</strong>.
  * 
  * @author Sébastien Bordes
  */
-public enum EDPFontsLoader implements FontName {
+public enum EDPFontNames implements FontName {
 
     /** . */
     DINk,
@@ -47,13 +46,5 @@ public enum EDPFontsLoader implements FontName {
 
     /** The Boris black bloxx. */
     BorisBlackBloxx;
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public String get() {
-        return name();
-    }
 
 }

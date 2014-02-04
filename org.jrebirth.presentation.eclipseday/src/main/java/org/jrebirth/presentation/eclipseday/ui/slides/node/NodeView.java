@@ -40,10 +40,10 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.presentation.PrezFonts;
+import org.jrebirth.presentation.eclipseday.resources.EDPImages;
+import org.jrebirth.presentation.resources.PrezFonts;
 import org.jrebirth.presentation.ui.template.AbstractTemplateView;
 
-// TODO: Auto-generated Javadoc
 /**
  * 
  * The class <strong>HandlerView</strong>.
@@ -85,15 +85,15 @@ public final class NodeView extends AbstractTemplateView<NodeModel, AnchorPane, 
      * {@inheritDoc}
      */
     @Override
-    protected void customInitializeComponents() {
-        super.customInitializeComponents();
+    protected void initView() {
+        super.initView();
 
         this.woodNode = ImageViewBuilder.create()
-                .image(loadImage("images/node/think_node.jpg"))
+                .image(EDPImages.NODE.get())
                 .build();
 
         this.tree = ImageViewBuilder.create()
-                .image(loadImage("images/node/think_tree.jpg"))
+                .image(EDPImages.TREE.get())
                 .opacity(0.0)
                 .build();
 
@@ -192,30 +192,6 @@ public final class NodeView extends AbstractTemplateView<NodeModel, AnchorPane, 
     protected Node getContentPanel() {
         this.sp = StackPaneBuilder.create().build();
         return this.sp;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void doReload() {
-        // Nothing to do yet
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void doHide() {
-        // Nothing to do yet
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void doStart() {
-        // Nothing to do yet
     }
 
 }

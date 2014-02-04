@@ -37,10 +37,10 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.presentation.PrezFonts;
+import org.jrebirth.presentation.eclipseday.resources.EDPImages;
+import org.jrebirth.presentation.resources.PrezFonts;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
-// TODO: Auto-generated Javadoc
 /**
  * 
  * The class <strong>IntroView</strong>.
@@ -84,10 +84,10 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
      * {@inheritDoc}
      */
     @Override
-    protected void customInitializeComponents() {
+    protected void initView() {
 
         this.background = ImageViewBuilder.create()
-                .image(loadImage("images/intro/eclipseDay_intro.jpg"))
+                .image(EDPImages.PLACE_BG.get())
                 .build();
 
         getRootNode().getChildren().add(this.background);
@@ -165,7 +165,7 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
      * {@inheritDoc}
      */
     @Override
-    public void doStart() {
+    public void start() {
         this.sequence.playFromStart();
     }
 
@@ -173,7 +173,7 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
      * {@inheritDoc}
      */
     @Override
-    public void doReload() {
+    public void reload() {
         // Nothing to do yet
     }
 
@@ -181,7 +181,7 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
      * {@inheritDoc}
      */
     @Override
-    public void doHide() {
+    public void hide() {
         // Nothing to do yet
     }
 

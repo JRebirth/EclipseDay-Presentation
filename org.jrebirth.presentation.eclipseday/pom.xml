@@ -207,15 +207,23 @@
 
 		<dependency>
 			<groupId>org.jrebirth</groupId>
-			<artifactId>core</artifactId>
-			<version>0.7.0-SNAPSHOT</version>
+			<artifactId>preloader</artifactId>
+			<version>7.7.0-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.jrebirth</groupId>
 			<artifactId>presentation</artifactId>
-			<version>0.7.0-SNAPSHOT</version>
+			<version>7.7.0-SNAPSHOT</version>
 		</dependency>
+		
+		
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.13</version>
+		</dependency>
+		
 	</dependencies>
 
 

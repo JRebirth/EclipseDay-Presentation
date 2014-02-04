@@ -38,7 +38,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.CircleBuilder;
 
 import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.presentation.PrezColors;
+import org.jrebirth.presentation.resources.PrezColors;
 import org.jrebirth.presentation.ui.template.AbstractTemplateView;
 
 // TODO: Auto-generated Javadoc
@@ -107,29 +107,4 @@ public final class PropertyView extends AbstractTemplateView<PropertyModel, Anch
         getRootNode().getChildren().add(vb);
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void doReload() {
-        // Nothing to do yet
-
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void doHide() {
-        // Nothing to do yet
-
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void doStart() {
-        // Nothing to do yet
-    }
 }

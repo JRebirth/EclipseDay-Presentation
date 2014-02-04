@@ -15,42 +15,41 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.jrebirth.presentation.eclipseday;
+package org.jrebirth.presentation.eclipseday.resources;
 
 import javafx.scene.text.Font;
 
 import org.jrebirth.core.resource.ResourceBuilders;
 import org.jrebirth.core.resource.font.FontBuilder;
-import org.jrebirth.core.resource.font.FontEnum;
+import org.jrebirth.core.resource.font.FontItem;
 import org.jrebirth.core.resource.font.FontParams;
 import org.jrebirth.core.resource.font.RealFont;
 
-// TODO: Auto-generated Javadoc
 /**
  * The class <strong>PrezFonts</strong>.
  * 
  * @author Sébastien Bordes
  * 
  */
-public enum EDPFonts implements FontEnum {
+public enum EDPFonts implements FontItem {
 
     /** The splash font. */
-    PAGE(new RealFont(EDPFontsLoader.DINk, 24)),
+    PAGE(new RealFont(EDPFontNames.DINk, 24)),
 
     /** The slide title font. */
-    SLIDE_TITLE(new RealFont(EDPFontsLoader.Harabara, 30)),
+    SLIDE_TITLE(new RealFont(EDPFontNames.Harabara, 30)),
 
     /** The slide subtitle font. */
-    SLIDE_SUBTITLE(new RealFont(EDPFontsLoader.Harabara, 20)),
+    SLIDE_SUBTITLE(new RealFont(EDPFontNames.Harabara, 20)),
 
     /** The typewriter font. */
-    TYPEWRITER(new RealFont(EDPFontsLoader.Report_1942, 72)),
+    TYPEWRITER(new RealFont(EDPFontNames.Report_1942, 72)),
 
     /** The typewriter font. */
-    TYPEWRITER2(new RealFont(EDPFontsLoader.OliJo, 72)),
+    TYPEWRITER2(new RealFont(EDPFontNames.OliJo, 72)),
 
     /** The splash font. */
-    SPLASH(new RealFont(EDPFontsLoader.BorisBlackBloxx, 30));
+    SPLASH(new RealFont(EDPFontNames.BorisBlackBloxx, 30));
 
     /**
      * Default Constructor.
@@ -58,7 +57,7 @@ public enum EDPFonts implements FontEnum {
      * @param fontParams the font size
      */
     EDPFonts(final FontParams fontParams) {
-        factory().storeParams(this, fontParams);
+        builder().storeParams(this, fontParams);
     }
 
     /**
@@ -66,15 +65,15 @@ public enum EDPFonts implements FontEnum {
      */
     @Override
     public Font get() {
-        return factory().get(this);
+        return builder().get(this);
     }
 
     /**
      * {@inheritDoc}
      */
     @Override
-    public FontBuilder factory() {
-        return (FontBuilder) ResourceBuilders.FONT_BUILDER.use();
+    public FontBuilder builder() {
+        return ResourceBuilders.FONT_BUILDER;
     }
 
 }

@@ -30,11 +30,10 @@ import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
 import org.jrebirth.core.exception.CoreException;
+import org.jrebirth.presentation.eclipseday.resources.EDPImages;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
-// TODO: Auto-generated Javadoc
 /**
- * 
  * The class <strong>IntroView</strong>.
  * 
  * The custom introduction slide.
@@ -64,12 +63,12 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, StackPane, Pl
      * {@inheritDoc}
      */
     @Override
-    protected void customInitializeComponents() {
+    protected void initView() {
 
         // getRootNode().getParent().setOpacity(0);
 
         final ImageView toulouse = ImageViewBuilder.create()
-                .image(loadImage("images/intro/eclipseDay_intro.jpg"))
+                .image(EDPImages.PLACE_BG.get())
                 // .fitHeight(Double.MAX_VALUE)
                 // .fitWidth(Double.MAX_VALUE)
                 .build();
@@ -114,24 +113,8 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, StackPane, Pl
      * {@inheritDoc}
      */
     @Override
-    public void doStart() {
+    public void start() {
         this.transition.playFromStart();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void doReload() {
-        // Nothing to do yet
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void doHide() {
-        // Nothing to do yet
     }
 
 }

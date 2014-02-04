@@ -20,12 +20,10 @@ package org.jrebirth.presentation.eclipseday.ui.slides.node;
 import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.ui.template.AbstractTemplateController;
 
-// TODO: Auto-generated Javadoc
 /**
  * The class <strong>HandlerController</strong>.
  * 
  * @author Sébastien Bordes
- * 
  */
 public final class NodeController extends AbstractTemplateController<NodeModel, NodeView> {
 
@@ -40,19 +38,4 @@ public final class NodeController extends AbstractTemplateController<NodeModel, 
         super(view);
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void customInitializeEventAdapters() throws CoreException {
-        super.customInitializeEventAdapters();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void customInitializeEventHandlers() throws CoreException {
-        super.customInitializeEventHandlers();
-    }
 }

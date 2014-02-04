@@ -18,10 +18,8 @@
 package org.jrebirth.presentation.eclipseday;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
@@ -29,22 +27,20 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-import org.jrebirth.core.application.AbstractApplication;
-import org.jrebirth.core.resource.font.FontEnum;
+import org.jrebirth.core.application.DefaultApplication;
+import org.jrebirth.core.resource.font.FontItem;
 import org.jrebirth.core.ui.Model;
-import org.jrebirth.core.wave.Wave;
+import org.jrebirth.presentation.eclipseday.resources.EDPFonts;
 import org.jrebirth.presentation.ui.stack.StackModel;
 
-// TODO: Auto-generated Javadoc
 /**
  * The class <strong>JRebirthAnalyzer</strong>.
  * 
  * The application that demonstrate how to use JRebirth Framework. It also allow to show all JRebirth events.
  * 
  * @author Sébastien Bordes
- * 
  */
-public final class EclipseDayPresentation extends AbstractApplication<StackPane> {
+public final class EclipseDayPresentation extends DefaultApplication<StackPane> {
 
     /**
      * Application launcher.
@@ -52,7 +48,7 @@ public final class EclipseDayPresentation extends AbstractApplication<StackPane>
      * @param args the command line arguments
      */
     public static void main(final String... args) {
-        Application.launch(EclipseDayPresentation.class, args);
+        preloadAndLaunch(args);
     }
 
     /**
@@ -125,27 +121,11 @@ public final class EclipseDayPresentation extends AbstractApplication<StackPane>
      * {@inheritDoc}
      */
     @Override
-    protected List<FontEnum> getFontToPreload() {
-        return Arrays.asList(new FontEnum[] {
+    protected List<FontItem> getFontToPreload() {
+        return Arrays.asList(new FontItem[] {
                 EDPFonts.SPLASH,
                 EDPFonts.TYPEWRITER
         });
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<Wave> getPreBootWaveList() {
-        return Collections.emptyList();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public List<Wave> getPostBootWaveList() {
-        return Collections.emptyList();
     }
 
 }
