@@ -8,7 +8,7 @@
 	</parent>
 	
 	<groupId>org.jrebirth.presentation</groupId>
-	<artifactId>eclipse</artifactId>
+	<artifactId>eclipseday</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	
 	<name>JavaFX With Eclipse Presentation</name>
@@ -16,10 +16,6 @@
 	<description>Interactive Presentation of JavaFX and Eclipse capabilities</description>
 	
 	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	
-		<deployUrl>http://apps.jrebirth.org</deployUrl>
-		<deployPath>${project.artifactId}/${project.version}</deployPath>
 
 		<jnlpFilename>EclipseDayToulouse.jnlp</jnlpFilename>
 		<appClass>org.jrebirth.presentation.eclipseday.EclipseDayPresentation</appClass>
@@ -31,11 +27,6 @@
 		
 	</properties>
 
-	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://ci.jrebirth.org/job/Presentation-Trunk/</url>
-	</ciManagement>
-	
 	<scm>
 		<connection>scm:git:git://github.com/JRebirth/EclipseDay-Presentation.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/JRebirth/EclipseDay-Presentation.git</developerConnection>
