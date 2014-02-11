@@ -15,11 +15,11 @@
     -fx-fill : #A0DCFF ;
 }
 
-/*
+
 .introTitle {
 	-fx-font : 100px "1942 Report"; 
 	-fx-label-fill: #FFFFFF;
-}*/
+}
 
 
 .header{
@@ -41,6 +41,16 @@
 	-fx-background-repeat: no-repeat;
 }
 
+.content {
+	/*-fx-background-color: rgba(242,242,242,1.0);
+	-fx-background-radius: 2px;*/
+	-fx-padding : 30px 50px 20px 50px;
+	
+	-fx-background-color: rgba(242,242,242,1.0);
+	-fx-background-radius: 0 2px 0 0;
+}
+
+
 /*.classicContainer {
 	
 	-fx-padding : 20px;
@@ -49,21 +59,21 @@
 }*/
 
 VBox.content {
-	-fx-padding:30px;
+	/*-fx-padding:30px;
 	-fx-background-color: rgba(255,255,255,0.6);
 	-fx-background-radius: 10px;
-	
+	*/
 }
 
 .item0 {
 	
-	-fx-font : 1.9em "Neuton Cursive";
+	-fx-font : 3.6em "Neuton Cursive";
 	-fx-fill : #004442;
 }
 
 .item1 {
 
-	-fx-font : 1.4em "Neuton Cursive";
+	-fx-font : 2.2em "Neuton Cursive";
 	-fx-fill: rgb(60,60,70);
 	-fx-padding-left : 40px;
 	-fx-translate-x : 40 ;
@@ -71,7 +81,7 @@ VBox.content {
 
 .item2 {
 
-	-fx-font : 1.4em "Neuton Cursive";
+	-fx-font : 2.0em "Neuton Cursive";
 	-fx-fill : #169E99;
 	-fx-padding-left : 80px;
 	-fx-translate-x : 80;
@@ -79,12 +89,12 @@ VBox.content {
  
 .link0 {
 	
-	-fx-font : 1.3em "Neuton Cursive";
+	-fx-font : 2.2em "Neuton Cursive";
 	-fx-fill : #004442;
 }
 .link1 {
 	
-	-fx-font : 1.2em "Neuton Cursive";
+	-fx-font : 2.0em "Neuton Cursive";
 	-fx-fill : #004442;
 }
 
@@ -102,9 +112,9 @@ VBox.content {
  * Me Slide
  */
 VBox.me{
-	-fx-background-position: 850px 20px, 300px 40px, 300px 370px;	
-	-fx-background-repeat: no-repeat, no-repeat, no-repeat;
-	-fx-background-image : url("../images/me/seb.jpg"), url("../images/me/SudIngenierie_clear.png"), url("../images/me/JRebirth_128x128.png");
+	-fx-background-position: 700px 20px, 300px 370px;	
+	-fx-background-repeat: no-repeat, no-repeat;
+	-fx-background-image : url("../images/me/seb.jpg"), url("../images/me/JRebirth_128x128.png");
 }
 
 /**************************************/
@@ -136,6 +146,7 @@ VBox.me{
 	-fx-background-position: center center;
 	-fx-background-repeat : no-repeat;
 }
+
 
 .notroll {
 	-fx-background-color : #FFFFFF;

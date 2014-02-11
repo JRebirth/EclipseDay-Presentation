@@ -41,9 +41,7 @@ import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.resources.PrezColors;
 import org.jrebirth.presentation.ui.template.AbstractTemplateView;
 
-// TODO: Auto-generated Javadoc
 /**
- * 
  * The class <strong>PropertyView</strong>.
  * 
  * The custom introduction slide.

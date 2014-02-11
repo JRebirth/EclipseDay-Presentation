@@ -17,11 +17,11 @@
  */
 package org.jrebirth.presentation.eclipseday.resources;
 
-import static org.jrebirth.core.resource.Resources.create;
-
 import org.jrebirth.core.resource.image.ImageExtension;
 import org.jrebirth.core.resource.image.ImageItem;
 import org.jrebirth.core.resource.image.LocalImage;
+
+import static org.jrebirth.core.resource.Resources.create;
 
 /**
  * The EDPImages interface providing all images.
@@ -31,8 +31,10 @@ public interface EDPImages {
     /** The background image used by place slide. */
     ImageItem PLACE_BG = create(new LocalImage("intro", "eclipseDay_intro", ImageExtension.JPG));
 
+    ImageItem PLACE_BG2 = create(new LocalImage("intro", "eclipseDay_intro2", ImageExtension.JPG));
+
     /** The background image used by place slide. */
-    ImageItem BG = create(new LocalImage("background_eclipse", ImageExtension.JPG));
+    ImageItem INTRO_BG = create(new LocalImage("background_eclipse", ImageExtension.JPG));
 
     /** . */
     ImageItem NODE = create(new LocalImage("node", "think_node", ImageExtension.JPG));

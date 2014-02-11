@@ -89,7 +89,7 @@ public final class NodeView extends AbstractTemplateView<NodeModel, AnchorPane, 
         super.initView();
 
         this.woodNode = ImageViewBuilder.create()
-                .image(EDPImages.NODE.get())
+                .image(EDPImages.NODE.get()).scaleX(0.9).scaleY(0.9)
                 .build();
 
         this.tree = ImageViewBuilder.create()
@@ -97,14 +97,15 @@ public final class NodeView extends AbstractTemplateView<NodeModel, AnchorPane, 
                 .opacity(0.0)
                 .build();
 
-        getRootNode().getChildren().add(this.sp);
-
+        // getRootNode().setCenter(this.sp);
     }
 
     /**
      * TODO To complete.
      */
     public void showWoodNode() {
+        this.sp = StackPaneBuilder.create().build();
+        showCustomSlideStep(this.sp);
 
         this.sp.getChildren().add(this.woodNode);
         StackPane.setAlignment(this.woodNode, Pos.CENTER);
@@ -120,14 +121,14 @@ public final class NodeView extends AbstractTemplateView<NodeModel, AnchorPane, 
                 .text("Think Node")
                 .font(PrezFonts.SPLASH.get())
                 .textFill(Color.WHITE)
-                .scaleX(1000)
-                .scaleY(1000)
+                .scaleX(500)
+                .scaleY(500)
                 .build();
 
         this.sp.getChildren().add(this.thinkNode);
         StackPane.setAlignment(this.thinkNode, Pos.CENTER);
 
-        ScaleTransitionBuilder.create().toX(3).toY(3).node(this.thinkNode).duration(Duration.seconds(1)).interpolator(Interpolator.LINEAR).build().play();
+        ScaleTransitionBuilder.create().toX(2.5).toY(2.5).node(this.thinkNode).duration(Duration.millis(400)).interpolator(Interpolator.LINEAR).build().play();
 
     }
 
@@ -175,14 +176,14 @@ public final class NodeView extends AbstractTemplateView<NodeModel, AnchorPane, 
                 .text("Think Tree")
                 .font(PrezFonts.SPLASH.get())
                 .textFill(Color.WHITE)
-                .scaleX(1000)
-                .scaleY(1000)
+                .scaleX(500)
+                .scaleY(500)
                 .build();
 
         this.sp.getChildren().add(this.thinkTree);
         StackPane.setAlignment(this.thinkTree, Pos.CENTER);
 
-        ScaleTransitionBuilder.create().toX(3).toY(3).node(this.thinkTree).duration(Duration.seconds(1)).interpolator(Interpolator.LINEAR).build().play();
+        ScaleTransitionBuilder.create().toX(2.5).toY(2.5).node(this.thinkTree).duration(Duration.millis(400)).interpolator(Interpolator.LINEAR).build().play();
     }
 
     /**

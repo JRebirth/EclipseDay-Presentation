@@ -38,7 +38,6 @@ import javafx.util.Duration;
 
 import org.jrebirth.core.exception.CoreException;
 import org.jrebirth.presentation.eclipseday.resources.EDPImages;
-import org.jrebirth.presentation.resources.PrezFonts;
 import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
 /**
@@ -96,8 +95,8 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
         this.label = LabelBuilder
                 .create()
                 // .text(getModel().getSlide().getTitle().replaceAll("\\\\n", "\n").replaceAll("\\\\t", "\t"))
-                // .styleClass("label", "introTitle")
-                .font(PrezFonts.TYPEWRITER.get())
+                .styleClass("label", "introTitle")
+                // .font(EDPFonts.TYPEWRITER.get())
                 // .textFill(Color.BLACK) // web("#7F0055")
                 .textFill(Color.WHITE)
                 .alignment(Pos.CENTER_LEFT)

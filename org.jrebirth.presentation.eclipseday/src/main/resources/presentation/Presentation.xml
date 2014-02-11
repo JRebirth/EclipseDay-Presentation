@@ -14,7 +14,7 @@
 
 	
 		<!-- Conference Place -->
-		<slide style="place" modelClass="org.jrebirth.presentation.eclipseday.ui.slides.place.PlaceModel">
+		<slide style="place" modelClass="org.jrebirth.presentation.eclipseday.ui.slides.place.PlaceModel" hideAnimation="FadeOut">
 		</slide>
 
 		<!-- Presentation Title -->
@@ -89,7 +89,7 @@
 		<slide>
 			<title>Java FX 2.0 Architecture</title>
 			<content>
-				<item image="images/bg/Architecture_JavaFX_2.png" />
+				<item image="bg/Architecture_JavaFX_2.png" />
 			</content>
 		</slide>
 
@@ -177,7 +177,7 @@
 		<!-- Properties -->
 		<slide modelClass="org.jrebirth.presentation.eclipseday.ui.slides.property.PropertyModel">
 			<title>Observable and Binding</title>
-			<content>
+			<content name="Text">
 				<title>Collection</title>
 				<item>Listen collection update</item>
 				<item level="1">ObservableList</item>
@@ -381,7 +381,7 @@
 		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" animation="Tile60k">
 			<content>
 				<!-- <title>API par l'exemple</title> -->
-				<item image="images/splash/Demo.jpg" />
+				<item image="splash/Demo.jpg" />
 			</content>
 		</slide>
 		
@@ -393,7 +393,7 @@
 				<item>GitHub is your friend !</item>
 				<item></item>
 				<item level="1">https://github.com/JRebirth/EclipseDay-Presentation</item>
-				<item image="images/bg/jrebirth-github.png" />
+				<item image="bg/jrebirth-github.png" />
 			</content>
 		</slide>
 
