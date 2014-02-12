@@ -17,7 +17,7 @@
  */
 package org.jrebirth.presentation.eclipseday.ui.slides.property;
 
-import org.jrebirth.presentation.ui.template.AbstractTemplateModel;
+import org.jrebirth.af.presentation.ui.template.AbstractTemplateModel;
 
 // TODO: Auto-generated Javadoc
 /**

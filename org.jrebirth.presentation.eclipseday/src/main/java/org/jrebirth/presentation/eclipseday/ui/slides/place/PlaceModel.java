@@ -17,8 +17,8 @@
  */
 package org.jrebirth.presentation.eclipseday.ui.slides.place;
 
-import org.jrebirth.presentation.ui.base.AbstractSlideModel;
-import org.jrebirth.presentation.ui.base.SlideStep;
+import org.jrebirth.af.presentation.ui.base.AbstractSlideModel;
+import org.jrebirth.af.presentation.ui.base.SlideStep;
 
 // TODO: Auto-generated Javadoc
 /**

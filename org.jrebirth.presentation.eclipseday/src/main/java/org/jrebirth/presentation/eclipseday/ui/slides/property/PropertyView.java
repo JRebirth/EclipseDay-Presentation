@@ -37,9 +37,9 @@ import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.CircleBuilder;
 
-import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.presentation.resources.PrezColors;
-import org.jrebirth.presentation.ui.template.AbstractTemplateView;
+import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.presentation.resources.PrezColors;
+import org.jrebirth.af.presentation.ui.template.AbstractTemplateView;
 
 /**
  * The class <strong>PropertyView</strong>.

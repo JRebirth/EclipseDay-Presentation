@@ -17,7 +17,7 @@
  */
 package org.jrebirth.presentation.eclipseday.resources;
 
-import org.jrebirth.core.resource.font.FontName;
+import org.jrebirth.af.core.resource.font.FontName;
 
 /**
  * The class <strong>EDPFontNames</strong>.

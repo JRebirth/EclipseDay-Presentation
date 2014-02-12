@@ -17,8 +17,8 @@
  */
 package org.jrebirth.presentation.eclipseday.ui.slides.node;
 
-import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.presentation.ui.template.AbstractTemplateController;
+import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.presentation.ui.template.AbstractTemplateController;
 
 /**
  * The class <strong>HandlerController</strong>.

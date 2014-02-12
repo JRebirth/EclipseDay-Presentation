@@ -29,9 +29,9 @@ import javafx.scene.image.ImageViewBuilder;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
-import org.jrebirth.core.exception.CoreException;
+import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.presentation.ui.base.AbstractSlideView;
 import org.jrebirth.presentation.eclipseday.resources.EDPImages;
-import org.jrebirth.presentation.ui.base.AbstractSlideView;
 
 /**
  * The class <strong>IntroView</strong>.

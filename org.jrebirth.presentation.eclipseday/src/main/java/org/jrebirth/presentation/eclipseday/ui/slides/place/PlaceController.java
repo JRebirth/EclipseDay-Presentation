@@ -17,8 +17,8 @@
  */
 package org.jrebirth.presentation.eclipseday.ui.slides.place;
 
-import org.jrebirth.core.exception.CoreException;
-import org.jrebirth.presentation.ui.base.AbstractSlideController;
+import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.presentation.ui.base.AbstractSlideController;
 
 // TODO: Auto-generated Javadoc
 /**
