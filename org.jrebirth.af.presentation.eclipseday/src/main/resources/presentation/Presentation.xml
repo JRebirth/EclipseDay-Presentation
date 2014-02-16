@@ -10,15 +10,15 @@
 		<speaker firstName="Sébastien" lastName="Bordes" email="contact@jrebirth.org" job="JRebirth" />
 	</speakers>
 
-	<slides defaultModelClass="org.jrebirth.presentation.ui.classic.ClassicModel">
+	<slides defaultModelClass="org.jrebirth.af.presentation.ui.classic.ClassicModel">
 
 	
 		<!-- Conference Place -->
-		<slide style="place" modelClass="org.jrebirth.presentation.eclipseday.ui.slides.place.PlaceModel" hideAnimation="FadeOut">
+		<slide style="place" modelClass="org.jrebirth.af.presentation.eclipseday.ui.slides.place.PlaceModel" hideAnimation="FadeOut">
 		</slide>
 
 		<!-- Presentation Title -->
-		<slide style="intro" modelClass="org.jrebirth.presentation.eclipseday.ui.slides.intro.IntroModel">
+		<slide style="intro" modelClass="org.jrebirth.af.presentation.eclipseday.ui.slides.intro.IntroModel">
 			<title>Using JavaFX2\n  with Eclipse</title>
 		</slide>
 
@@ -67,20 +67,20 @@
 		<!-- ************************************************************************* -->
 
 		<!-- HOOK -->
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="doyousee">
+		<slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel" style="doyousee">
 			<title>Have you ever \n seen a  \n JavaFX 2 \n application ?</title>
 		</slide>
 
 		<!-- HOOK -->
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="dogfooding">
+		<slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel" style="dogfooding">
 			<title>Really ??</title>
 		</slide>
 
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel">
+		<slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel">
 			<title>JavaFX != JAVA</title>
 		</slide>
 		
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel">
+		<slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel">
 			<title>JavaFX 2\n IS \n JAVA</title>
 		</slide>
 
@@ -94,7 +94,7 @@
 		</slide>
 
 
-		<slide modelClass="org.jrebirth.presentation.eclipseday.ui.slides.node.NodeModel">
+		<slide modelClass="org.jrebirth.af.presentation.eclipseday.ui.slides.node.NodeModel">
 			<title>UI Structure</title>
 		</slide>
 
@@ -175,7 +175,7 @@
 		
 		
 		<!-- Properties -->
-		<slide modelClass="org.jrebirth.presentation.eclipseday.ui.slides.property.PropertyModel">
+		<slide modelClass="org.jrebirth.af.presentation.eclipseday.ui.slides.property.PropertyModel">
 			<title>Observable and Binding</title>
 			<content name="Text">
 				<title>Collection</title>
@@ -378,7 +378,7 @@
 		</slide>
 		
 		<!-- HOOK -->
-		<slide modelClass="org.jrebirth.presentation.ui.image.ImageSlideModel" animation="Tile60k">
+		<slide modelClass="org.jrebirth.af.presentation.ui.image.ImageSlideModel" animation="Tile60k">
 			<content>
 				<!-- <title>API par l'exemple</title> -->
 				<item image="splash/Demo.jpg" />
@@ -398,16 +398,16 @@
 		</slide>
 
 		<!-- THX -->
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel">
+		<slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel">
 			<title>Thank you \nfor your attention</title>
 		</slide>
 
 		<!-- Des Questions -->
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="notroll">
+		<slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel" style="notroll">
 			<title>Do you have \n any questions ?</title>
 		</slide>
 
-		<slide modelClass="org.jrebirth.presentation.ui.splash.SplashModel" style="qrcode">
+		<slide modelClass="org.jrebirth.af.presentation.ui.splash.SplashModel" style="qrcode">
 			<title></title>
 		</slide>
 		
