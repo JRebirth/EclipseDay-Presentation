@@ -31,7 +31,7 @@ import org.jrebirth.af.core.application.DefaultApplication;
 import org.jrebirth.af.core.resource.font.FontItem;
 import org.jrebirth.af.core.ui.Model;
 import org.jrebirth.af.presentation.eclipseday.resources.EDPFonts;
-import org.jrebirth.af.presentation.ui.stack.StackModel;
+import org.jrebirth.af.presentation.ui.stack.SlideStackModel;
 
 /**
  * The class <strong>JRebirthAnalyzer</strong>.
@@ -56,7 +56,7 @@ public final class EclipseDayPresentation extends DefaultApplication<StackPane> 
      */
     @Override
     public Class<? extends Model> getFirstModelClass() {
-        return StackModel.class;
+        return SlideStackModel.class;
     }
 
     /**

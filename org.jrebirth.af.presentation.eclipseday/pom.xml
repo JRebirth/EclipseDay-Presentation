@@ -9,7 +9,7 @@
 	
 	<groupId>org.jrebirth.af.presentation</groupId>
 	<artifactId>eclipseday</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	
 	<name>JavaFX With Eclipse Presentation</name>
 	<url>http://www.jrebirth.org</url>
@@ -58,13 +58,13 @@
 		<dependency>
 			<groupId>org.jrebirth.af</groupId>
 			<artifactId>preloader</artifactId>
-			<version>7.7.0</version>
+			<version>7.7.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.jrebirth.af</groupId>
 			<artifactId>presentation</artifactId>
-			<version>7.7.0</version>
+			<version>7.7.1</version>
 		</dependency>
 		
 		<dependency>
