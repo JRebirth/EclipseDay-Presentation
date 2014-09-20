@@ -19,7 +19,7 @@ package org.jrebirth.af.presentation.eclipseday.resources;
 
 import org.jrebirth.af.core.resource.image.ImageExtension;
 import org.jrebirth.af.core.resource.image.ImageItem;
-import org.jrebirth.af.core.resource.image.LocalImage;
+import org.jrebirth.af.core.resource.image.RelImage;
 
 import static org.jrebirth.af.core.resource.Resources.create;
 
@@ -29,16 +29,16 @@ import static org.jrebirth.af.core.resource.Resources.create;
 public interface EDPImages {
 
     /** The background image used by place slide. */
-    ImageItem PLACE_BG = create(new LocalImage("intro", "eclipseDay_intro", ImageExtension.JPG));
+    ImageItem PLACE_BG = create(new RelImage("intro", "eclipseDay_intro", ImageExtension.JPG));
 
-    ImageItem PLACE_BG2 = create(new LocalImage("intro", "eclipseDay_intro2", ImageExtension.JPG));
+    ImageItem PLACE_BG2 = create(new RelImage("intro", "eclipseDay_intro2", ImageExtension.JPG));
 
     /** The background image used by place slide. */
-    ImageItem INTRO_BG = create(new LocalImage("background_eclipse", ImageExtension.JPG));
+    ImageItem INTRO_BG = create(new RelImage("background_eclipse", ImageExtension.JPG));
 
     /** . */
-    ImageItem NODE = create(new LocalImage("node", "think_node", ImageExtension.JPG));
+    ImageItem NODE = create(new RelImage("node", "think_node", ImageExtension.JPG));
 
     /** . */
-    ImageItem TREE = create(new LocalImage("node", "think_tree", ImageExtension.JPG));
+    ImageItem TREE = create(new RelImage("node", "think_tree", ImageExtension.JPG));
 }
