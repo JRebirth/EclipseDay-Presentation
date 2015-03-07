@@ -29,7 +29,7 @@ import javafx.scene.image.ImageViewBuilder;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
-import org.jrebirth.af.core.exception.CoreException;
+import org.jrebirth.af.api.exception.CoreException;
 import org.jrebirth.af.presentation.eclipseday.resources.EDPImages;
 import org.jrebirth.af.presentation.ui.base.AbstractSlideView;
 

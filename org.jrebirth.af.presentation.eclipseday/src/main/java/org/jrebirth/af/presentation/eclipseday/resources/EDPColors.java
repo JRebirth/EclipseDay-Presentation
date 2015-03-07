@@ -19,10 +19,10 @@ package org.jrebirth.af.presentation.eclipseday.resources;
 
 import javafx.scene.paint.Color;
 
+import org.jrebirth.af.api.resource.color.ColorItem;
+import org.jrebirth.af.api.resource.color.ColorParams;
 import org.jrebirth.af.core.resource.ResourceBuilders;
 import org.jrebirth.af.core.resource.color.ColorBuilder;
-import org.jrebirth.af.core.resource.color.ColorItem;
-import org.jrebirth.af.core.resource.color.ColorParams;
 import org.jrebirth.af.core.resource.color.RGB255Color;
 import org.jrebirth.af.core.resource.color.WebColor;
 

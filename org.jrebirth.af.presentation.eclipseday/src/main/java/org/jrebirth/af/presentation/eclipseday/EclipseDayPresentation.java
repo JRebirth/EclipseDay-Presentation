@@ -27,9 +27,10 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
+import org.jrebirth.af.api.resource.ResourceItem;
+import org.jrebirth.af.api.resource.font.FontItem;
+import org.jrebirth.af.api.ui.Model;
 import org.jrebirth.af.core.application.DefaultApplication;
-import org.jrebirth.af.core.resource.font.FontItem;
-import org.jrebirth.af.core.ui.Model;
 import org.jrebirth.af.presentation.eclipseday.resources.EDPFonts;
 import org.jrebirth.af.presentation.ui.stack.SlideStackModel;
 
@@ -121,7 +122,7 @@ public final class EclipseDayPresentation extends DefaultApplication<StackPane> 
      * {@inheritDoc}
      */
     @Override
-    protected List<FontItem> getFontToPreload() {
+    protected List<? extends ResourceItem<?, ?, ?>> getResourceToPreload() {
         return Arrays.asList(new FontItem[] {
                 EDPFonts.SPLASH,
                 EDPFonts.TYPEWRITER
