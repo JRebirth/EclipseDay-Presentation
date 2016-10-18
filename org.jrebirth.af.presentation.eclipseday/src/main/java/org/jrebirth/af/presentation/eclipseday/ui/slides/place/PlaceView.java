@@ -65,7 +65,7 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, StackPane, Pl
     @Override
     protected void initView() {
 
-        // getRootNode().getParent().setOpacity(0);
+        // node().getParent().setOpacity(0);
 
         final ImageView toulouse = ImageViewBuilder.create()
                 .image(EDPImages.PLACE_BG.get())
@@ -80,11 +80,11 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, StackPane, Pl
                 .build();
         toulouse.setEffect(fx);
 
-        getRootNode().getChildren().add(toulouse);
+        node().getChildren().add(toulouse);
 
-        getRootNode().getStyleClass().add(getModel().getSlide().getStyle());
+        node().getStyleClass().add(model().getSlide().getStyle());
 
-        this.fadeTransition = new FadeTransition(Duration.seconds(4), getRootNode());
+        this.fadeTransition = new FadeTransition(Duration.seconds(4), node());
         this.fadeTransition.setFromValue(0.0f);
         this.fadeTransition.setToValue(1.0f);
         this.fadeTransition.setCycleCount(1);

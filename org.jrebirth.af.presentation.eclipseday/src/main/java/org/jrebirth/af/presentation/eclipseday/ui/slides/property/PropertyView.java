@@ -66,7 +66,7 @@ public final class PropertyView extends AbstractTemplateView<PropertyModel, Anch
      */
     @Override
     protected Node getContentPanel() {
-        return buildDefaultContent(getModel().getDefaultContent());
+        return buildDefaultContent(model().getDefaultContent());
     }
 
     /**
@@ -74,7 +74,7 @@ public final class PropertyView extends AbstractTemplateView<PropertyModel, Anch
      */
     public void showBinding() {
 
-        final VBox vb = buildDefaultContent(getModel().getContent(PropertySlideStep.Binding));
+        final VBox vb = buildDefaultContent(model().getContent(PropertySlideStep.Binding));
 
         final NumberFormat nf = new DecimalFormat("0.0");
         final Circle c = CircleBuilder.create().fill(PrezColors.SHAPE_BLUE.get()).radius(50).build();
@@ -102,7 +102,7 @@ public final class PropertyView extends AbstractTemplateView<PropertyModel, Anch
             }
         });
 
-        getRootNode().getChildren().add(vb);
+        node().getChildren().add(vb);
     }
 
 }

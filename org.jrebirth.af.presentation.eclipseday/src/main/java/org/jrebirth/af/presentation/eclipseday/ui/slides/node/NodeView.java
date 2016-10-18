@@ -97,7 +97,7 @@ public final class NodeView extends AbstractTemplateView<NodeModel, AnchorPane, 
                 .opacity(0.0)
                 .build();
 
-        // getRootNode().setCenter(this.sp);
+        // node().setCenter(this.sp);
     }
 
     /**
