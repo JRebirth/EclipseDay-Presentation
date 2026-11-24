@@ -29,16 +29,16 @@ import org.jrebirth.af.core.resource.image.RelImage;
 public interface EDPImages {
 
     /** The background image used by place slide. */
-    ImageItem PLACE_BG = create(new RelImage("intro", "eclipseDay_intro", ImageExtension.JPG));
+    ImageItem PLACE_BG = create(new RelImage("intro", "eclipseDay_intro", ImageExtension.JPG)).module(EDPImages.class.getModule());
 
-    ImageItem PLACE_BG2 = create(new RelImage("intro", "eclipseDay_intro2", ImageExtension.JPG));
+    ImageItem PLACE_BG2 = create(new RelImage("intro", "eclipseDay_intro2", ImageExtension.JPG)).module(EDPImages.class.getModule());
 
     /** The background image used by place slide. */
-    ImageItem INTRO_BG = create(new RelImage("background_eclipse", ImageExtension.JPG));
+    ImageItem INTRO_BG = create(new RelImage("background_eclipse", ImageExtension.JPG)).module(EDPImages.class.getModule());
 
     /** . */
-    ImageItem NODE = create(new RelImage("node", "think_node", ImageExtension.JPG));
+    ImageItem NODE = create(new RelImage("node", "think_node", ImageExtension.JPG)).module(EDPImages.class.getModule());
 
     /** . */
-    ImageItem TREE = create(new RelImage("node", "think_tree", ImageExtension.JPG));
+    ImageItem TREE = create(new RelImage("node", "think_tree", ImageExtension.JPG)).module(EDPImages.class.getModule());
 }

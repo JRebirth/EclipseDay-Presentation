@@ -27,11 +27,8 @@ import javafx.animation.SequentialTransition;
 import javafx.animation.Timeline;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.control.LabelBuilder;
 import javafx.scene.effect.BoxBlur;
-import javafx.scene.effect.BoxBlurBuilder;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.ImageViewBuilder;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
@@ -85,24 +82,21 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
     @Override
     protected void initView() {
 
-        this.background = ImageViewBuilder.create()
-                                          .image(EDPImages.PLACE_BG.get())
-                                          .build();
+        this.background = new ImageView();
+        this.background.setImage(EDPImages.PLACE_BG.get());
 
         node().getChildren().add(this.background);
         StackPane.setAlignment(this.background, Pos.CENTER);
 
-        this.label = LabelBuilder
-                                 .create()
-                                 // .text(model().getSlide().getTitle().replaceAll("\\\\n", "\n").replaceAll("\\\\t", "\t"))
-                                 .styleClass("label", "introTitle")
-                                 // .font(EDPFonts.TYPEWRITER.get())
-                                 // .textFill(Color.BLACK) // web("#7F0055")
-                                 .textFill(Color.WHITE)
-                                 .alignment(Pos.CENTER_LEFT)
-                                 .minWidth(800)
-                                 .minHeight(500)
-                                 .build();
+        this.label = new Label();
+        // .text(model().getSlide().getTitle().replaceAll("\\\\n", "\n").replaceAll("\\\\t", "\t"))
+        this.label.getStyleClass().addAll("label", "introTitle");
+        // .font(EDPFonts.TYPEWRITER.get())
+        // .textFill(Color.BLACK) // web("#7F0055")
+        this.label.setTextFill(Color.WHITE);
+        this.label.setAlignment(Pos.CENTER_LEFT);
+        this.label.setMinWidth(800);
+        this.label.setMinHeight(500);
 
         // this.label.getStyleClass().add("introTitle");
 
@@ -121,11 +115,10 @@ public final class IntroView extends AbstractSlideView<IntroModel, StackPane, In
         this.fadeTransition.setCycleCount(1);
         this.fadeTransition.setAutoReverse(false);
 
-        final BoxBlur fx = BoxBlurBuilder.create()
-                                         .width(1)
-                                         .height(1)
-                                         .iterations(3)
-                                         .build();
+        final BoxBlur fx = new BoxBlur();
+        fx.setWidth(1);
+        fx.setHeight(1);
+        fx.setIterations(3);
         this.background.setEffect(fx);
 
         final Timeline blurFx = new Timeline(

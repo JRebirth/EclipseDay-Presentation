@@ -2,13 +2,13 @@
  * Get more info at : www.jrebirth.org .
  * Copyright JRebirth.org © 2011-2013
  * Contact : sebastien.bordes@jrebirth.org
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -25,17 +25,12 @@ import javafx.beans.value.ObservableValue;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
-import javafx.scene.control.LabelBuilder;
 import javafx.scene.control.Slider;
-import javafx.scene.control.SliderBuilder;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.FlowPaneBuilder;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.StackPaneBuilder;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.CircleBuilder;
 
 import org.jrebirth.af.api.exception.CoreException;
 import org.jrebirth.af.presentation.resources.PrezColors;
@@ -43,18 +38,18 @@ import org.jrebirth.af.presentation.ui.template.AbstractTemplateView;
 
 /**
  * The class <strong>PropertyView</strong>.
- * 
+ *
  * The custom introduction slide.
- * 
+ *
  * @author Sébastien Bordes
  */
 public final class PropertyView extends AbstractTemplateView<PropertyModel, AnchorPane, PropertyController> {
 
     /**
      * Default Constructor.
-     * 
+     *
      * @param model the controls view model
-     * 
+     *
      * @throws CoreException if build fails
      */
     public PropertyView(final PropertyModel model) throws CoreException {
@@ -77,14 +72,20 @@ public final class PropertyView extends AbstractTemplateView<PropertyModel, Anch
         final VBox vb = buildDefaultContent(model().getContent(PropertySlideStep.Binding));
 
         final NumberFormat nf = new DecimalFormat("0.0");
-        final Circle c = CircleBuilder.create().fill(PrezColors.SHAPE_BLUE.get()).radius(50).build();
-        final Slider s = SliderBuilder.create().min(0.1).max(5).value(1.0).majorTickUnit(1.0).maxWidth(200).build();
-        final Label l = LabelBuilder.create().text("1.0").build();
+        final Circle c = new Circle(50);
+        c.setFill(PrezColors.SHAPE_BLUE.get());
+        final Slider s = new Slider();
+        s.setMin(0.1);
+        s.setMax(5);
+        s.setValue(1.0);
+        s.setMajorTickUnit(1.0);
+        s.setMaxWidth(200);
+        final Label l = new Label("1.0");
 
-        final FlowPane fp = FlowPaneBuilder.create().children(s, l).build();
-        final StackPane sp = StackPaneBuilder.create()
-                .children(fp, c)
-                .build();
+        final FlowPane fp = new FlowPane();
+        fp.getChildren().addAll(s, l);
+        final StackPane sp = new StackPane();
+        sp.getChildren().addAll(fp, c);
 
         StackPane.setAlignment(fp, Pos.CENTER_LEFT);
         StackPane.setAlignment(c, Pos.CENTER);

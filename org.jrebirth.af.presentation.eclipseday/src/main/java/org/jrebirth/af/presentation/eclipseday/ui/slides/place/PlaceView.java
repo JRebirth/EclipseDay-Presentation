@@ -23,9 +23,7 @@ import javafx.animation.KeyValue;
 import javafx.animation.ParallelTransition;
 import javafx.animation.Timeline;
 import javafx.scene.effect.BoxBlur;
-import javafx.scene.effect.BoxBlurBuilder;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.ImageViewBuilder;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 
@@ -67,17 +65,15 @@ public final class PlaceView extends AbstractSlideView<PlaceModel, StackPane, Pl
 
         // node().getParent().setOpacity(0);
 
-        final ImageView toulouse = ImageViewBuilder.create()
-                .image(EDPImages.PLACE_BG.get())
-                // .fitHeight(Double.MAX_VALUE)
-                // .fitWidth(Double.MAX_VALUE)
-                .build();
+        final ImageView toulouse = new ImageView();
+        toulouse.setImage(EDPImages.PLACE_BG.get());
+        // .fitHeight(Double.MAX_VALUE)
+        // .fitWidth(Double.MAX_VALUE)
 
-        final BoxBlur fx = BoxBlurBuilder.create()
-                .width(1)
-                .height(1)
-                .iterations(3)
-                .build();
+        final BoxBlur fx = new BoxBlur();
+        fx.setWidth(1);
+        fx.setHeight(1);
+        fx.setIterations(3);
         toulouse.setEffect(fx);
 
         node().getChildren().add(toulouse);

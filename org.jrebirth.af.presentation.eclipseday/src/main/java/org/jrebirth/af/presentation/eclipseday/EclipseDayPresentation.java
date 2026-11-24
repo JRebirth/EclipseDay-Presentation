@@ -20,7 +20,6 @@ package org.jrebirth.af.presentation.eclipseday;
 import java.util.Arrays;
 import java.util.List;
 
-import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
@@ -32,6 +31,7 @@ import org.jrebirth.af.api.resource.font.FontItem;
 import org.jrebirth.af.api.ui.Model;
 import org.jrebirth.af.core.application.DefaultApplication;
 import org.jrebirth.af.presentation.eclipseday.resources.EDPFonts;
+import org.jrebirth.af.presentation.eclipseday.resources.EdpStyles;
 import org.jrebirth.af.presentation.ui.stack.SlideStackModel;
 
 /**
@@ -84,35 +84,29 @@ public final class EclipseDayPresentation extends DefaultApplication<StackPane> 
     @Override
     protected void customizeScene(final Scene scene) {
 
-        Platform.runLater(new Runnable() {
+        // Must attach CSS synchronously so manageDefaultStyleSheet does not look for core default.css
+        addCSS(scene, EdpStyles.TEMPLATE);
+
+        // Manage F11 button to switch full screen
+        scene.addEventFilter(javafx.scene.input.KeyEvent.KEY_RELEASED, new EventHandler<javafx.scene.input.KeyEvent>() {
 
             @Override
-            public void run() {
-                scene.getStylesheets().add("style/template.css");
-                // scene.getStylesheets().add("style/candle.css");
-
-                // Manage F11 button to switch full screen
-                scene.addEventFilter(javafx.scene.input.KeyEvent.KEY_RELEASED, new EventHandler<javafx.scene.input.KeyEvent>() {
-
-                    @Override
-                    public void handle(final javafx.scene.input.KeyEvent event) {
-                        if (event.isControlDown()) {
-                            if (event.getCode() == KeyCode.ADD || event.getCode() == KeyCode.PLUS) {
-                                scene().getRoot().setScaleX(scene().getRoot().getScaleX() + 0.05);
-                                scene().getRoot().setScaleY(scene().getRoot().getScaleY() + 0.05);
-                                event.consume();
-                            } else if (event.getCode() == KeyCode.SUBTRACT || event.getCode() == KeyCode.MINUS) {
-                                scene().getRoot().setScaleX(scene().getRoot().getScaleX() - 0.05);
-                                scene().getRoot().setScaleY(scene().getRoot().getScaleY() - 0.05);
-                                event.consume();
-                            } else if (event.getCode() == KeyCode.DIGIT0 || event.getCode() == KeyCode.NUMPAD0) {
-                                scene().getRoot().setScaleX(1.0);
-                                scene().getRoot().setScaleY(1.0);
-                                event.consume();
-                            }
-                        }
+            public void handle(final javafx.scene.input.KeyEvent event) {
+                if (event.isControlDown()) {
+                    if (event.getCode() == KeyCode.ADD || event.getCode() == KeyCode.PLUS) {
+                        scene().getRoot().setScaleX(scene().getRoot().getScaleX() + 0.05);
+                        scene().getRoot().setScaleY(scene().getRoot().getScaleY() + 0.05);
+                        event.consume();
+                    } else if (event.getCode() == KeyCode.SUBTRACT || event.getCode() == KeyCode.MINUS) {
+                        scene().getRoot().setScaleX(scene().getRoot().getScaleX() - 0.05);
+                        scene().getRoot().setScaleY(scene().getRoot().getScaleY() - 0.05);
+                        event.consume();
+                    } else if (event.getCode() == KeyCode.DIGIT0 || event.getCode() == KeyCode.NUMPAD0) {
+                        scene().getRoot().setScaleX(1.0);
+                        scene().getRoot().setScaleY(1.0);
+                        event.consume();
                     }
-                });
+                }
             }
         });
 
